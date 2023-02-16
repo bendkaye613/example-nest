@@ -15,12 +15,16 @@ export class UserController {
   findAll() {
     return this.userService.findAll();
   }
-}
-//   @Get(':id')
-//   findOne(@Param('id') id: string) {
-//     return this.userService.findOne(+id);
-//   }
 
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.userService.findOne(+id);
+  }
+}
+
+function Param(arg0: string) {
+  throw new Error('Function not implemented.');
+}
 //   @Patch(':id')
 //   update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
 //     return this.userService.update(+id, updateUserDto);
